@@ -10,9 +10,13 @@ import { IField } from './field';
 })
 export class FieldComponent {
   name: string;
-  type: string = 'select';
+  type: string = 'input';
   output: string;
   form: string;
   optionQty: number = 2;
   @Input() formType: string;
+
+  addOption(){
+    this.optionQty++;
+  }
 }

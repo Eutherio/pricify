@@ -16,8 +16,22 @@ select {
   border-radius: 3px;
 }
 .fields {
-  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.fields .title {
+  flex-basis: 20%;
+}
+.fields .title h3{
+  flex-basis: 20%;
+}
+.fields .content {
+  flex-basis: 80%;
   border: 1px solid #cecece;
+  border-radius: 5px;
+  padding: 0 15px;
 }
 .fields-header {
   display: flex;

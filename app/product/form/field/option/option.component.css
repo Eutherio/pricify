@@ -16,9 +16,9 @@
 .separator {
   width: 0;
   height: 0;
-  border-left: 15px solid #cecece;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  border-left: 10px solid #cecece;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
 }
 input {
   width: 100%;

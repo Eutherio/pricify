@@ -20,13 +20,22 @@
   <input class="input" type="number" placeholder="Valor asociado" *ngIf="type !== 'select'">
 </div>
 <div class="options" *ngIf="type === 'select'">
-  <div class="options-wrap">
-    <div class="options-header">
-      <div class="label">Texto</div>
-      <div class="value">Valor asociado</div>
+  <div class="title">
+    <h3>Opciones</h3>
+  </div>
+  <div class="content">
+    <!--<div class="options-wrap">
+      <div class="options-header">
+        <div class="label">Texto</div>
+        <div class="value">Valor asociado</div>
+      </div>
+    </div>-->
+    <div class="option-wrap" *ngFor="let i of optionQty | fill">
+      <py-option [fieldType]="type"></py-option>
+    </div>
+    <div class="option-wrap add-option">
+      <button (click)="addOption()">Añadir opción</button>
     </div>
   </div>
-  <div class="option-wrap" *ngFor="let i of optionQty | fill">
-    <py-option [fieldType]="type"></py-option>
-  </div>
+
 </div>

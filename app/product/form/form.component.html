@@ -8,21 +8,27 @@
     <option value="logical">Cálculo</option>
   </select>
   <div class="fields">
-    <div class="field-wrap">
-      <div class="fields-header">
-        <div class="name">Etiqueta</div>
-        <div class="type">Tipo de campo</div>
-        <div class="output">Tipo de valor</div>
-        <div class="value" *ngIf="type === 'logical'">Valor asociado</div>
+    <div class="title">
+      <h3>Campos</h3>
+    </div>
+    <div class="content">
+      <div class="field-wrap">
+        <div class="fields-header">
+          <div class="name">Etiqueta</div>
+          <div class="type">Tipo de campo</div>
+          <div class="output">Tipo de valor</div>
+          <div class="value" *ngIf="type === 'logical'">Valor asociado</div>
+        </div>
+      </div>
+      <div class="field-wrap" *ngFor="let i of fieldQty | fill">
+        <py-field [formType]='type'></py-field>
+      </div>
+      <div class="field-wrap">
+        <div class="add-field">
+          <button (click)='addField()'>Añadir campo</button>
+        </div>
       </div>
     </div>
-    <div class="field-wrap" *ngFor="let i of fieldQty | fill">
-      <py-field [formType]='type'></py-field>
-    </div>
-    <div class="field-wrap">
-      <div class="add-field">
-        <button (click)='addField()'>Añadir campo</button>
-      </div>
-    </div>
+    
   </div>
 </div>
