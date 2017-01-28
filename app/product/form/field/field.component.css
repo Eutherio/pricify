@@ -1,15 +1,44 @@
-:host {
+.wrapper {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 0;
   border-bottom: 1px solid #a8a8a8;
+  opacity: 1;
+  transition: all 0.2s;
+}
+.wrapper.invisible {
+  opacity: 0;
 }
 .input-wrap {
   flex-basis: 20%;
 }
 .input-wrap.name {
-  flex-basis: 29%;
+  flex-basis: 25%;
+}
+.input-wrap.remove {
+  flex-basis: 5%;
+}
+.btn-remove {
+  position: relative;
+  background: none;
+  border: 0;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+.btn-remove svg {
+  width: 100%;
+  height: 100%;
+}
+.btn-remove path {
+  transition: all 0.2s;
+}
+.btn-remove:hover path {
+  fill: #e13d3d;
 }
 .input {
   outline: none;

@@ -48,7 +48,7 @@ select {
   padding: 0 10px;
 }
 .name {
-  flex-basis: 29%;
+  flex-basis: 25%;
 }
 .type,
 .output,
@@ -57,6 +57,9 @@ select {
 }
 .value {
   text-align: right;
+}
+.remove {
+  flex-basis: 5%;
 }
 .add-form {
   padding: 10px;

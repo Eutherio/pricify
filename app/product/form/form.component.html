@@ -18,10 +18,14 @@
           <div class="type">Tipo de campo</div>
           <div class="output">Tipo de valor</div>
           <div class="value" *ngIf="type === 'logical'">Valor asociado</div>
+          <div class="remove"></div>
         </div>
       </div>
-      <div class="field-wrap" *ngFor="let i of fieldQty | fill">
-        <py-field [formType]='type'></py-field>
+      <div class="field-wrap" *ngFor="let i of fields">
+        <py-field [formType]='type'
+                  [localId]="i"
+                  [fieldsQty]="fields.length"
+                  (removeClicked)="removeField($event)"></py-field>
       </div>
       <div class="field-wrap">
         <div class="add-field">
