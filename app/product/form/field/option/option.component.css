@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.label {
+  flex-basis: 72.5%
+}
+.value {
+  flex-basis: 22.5%
+}
+.separator {
+  flex-basis: 5%;
+}
+.separator {
+  width: 0;
+  height: 0;
+  border-left: 15px solid #cecece;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+input {
+  width: 100%;
+  border: 0;
+  padding: 3px 10px;
+  outline: none;
+  font-size: 14px;
+}
+.value input {
+  text-align: right;
+  padding-right: 0;
+}

@@ -1,0 +1,66 @@
+h3 {
+  margin: 0 0 20px;
+}
+h3 input {
+  font-size: 26px;
+  border: 0;
+  outline: none;
+}
+textarea,
+select {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 14px;
+  padding: 7px 10px;
+  border-radius: 3px;
+}
+.fields {
+  padding: 0 15px;
+  border: 1px solid #cecece;
+}
+.fields-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-bottom: 2px solid #a8a8a8;
+  font-size: 16px;
+  padding: 15px 0;
+}
+.name,
+.type,
+.output,
+.value {
+  padding: 0 10px;
+}
+.name {
+  flex-basis: 29%;
+}
+.type,
+.output,
+.value {
+  flex-basis: 20%;
+}
+.value {
+  text-align: right;
+}
+.add-form {
+  padding: 10px;
+}
+.add-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.add-field button {
+  border: 0;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  display: block;
+  color: #cecece;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+}

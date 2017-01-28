@@ -1,0 +1,60 @@
+:host {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #a8a8a8;
+}
+.input-wrap {
+  flex-basis: 20%;
+}
+.input-wrap.name {
+  flex-basis: 29%;
+}
+.input {
+  outline: none;
+  width: 100%;
+}
+.name .input {
+  border: 0;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+.type .input,
+.output .input,
+.value .input {
+
+}
+.type .input,
+.output .input,
+.value .input {
+  flex-basis: 20%;
+  border: 1px solid #a8a8a8;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 7px 10px;
+}
+.value .input {
+  text-align: right;
+  padding-right: 0;
+}
+.options {
+  flex-basis: 100%;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 15px;
+}
+.option-wrap {
+  padding: 10px 0;
+  border-bottom: 1px solid #a8a8a8;
+}
+.options-header {
+  display: flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.options-header div {
+  flex-basis: 49%;
+}

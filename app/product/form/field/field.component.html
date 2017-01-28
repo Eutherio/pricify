@@ -1,0 +1,32 @@
+<div class="input-wrap name">
+  <input class="input" type="text" [(ngModel)]="name" placeholder="Etiqueta">
+</div>
+<div class="input-wrap type">
+  <select class="input" [(ngModel)]="type">
+    <option value="input">Simple</option>
+    <option value="textarea">Texto largo</option>
+    <option value="select">Opciones</option>
+    <option value="checkbox">Comprobación</option>
+  </select>
+</div>
+<div class="input-wrap output">
+  <select class="input" [(ngModel)]="output">
+    <option value="string">Texto</option>
+    <option value="number">Número</option>
+    <option value="boolean">Booleano</option>
+  </select>
+</div>
+<div class="input-wrap value" *ngIf="formType === 'logical'">
+  <input class="input" type="number" placeholder="Valor asociado" *ngIf="type !== 'select'">
+</div>
+<div class="options" *ngIf="type === 'select'">
+  <div class="options-wrap">
+    <div class="options-header">
+      <div class="label">Texto</div>
+      <div class="value">Valor asociado</div>
+    </div>
+  </div>
+  <div class="option-wrap" *ngFor="let i of optionQty | fill">
+    <py-option [fieldType]="type"></py-option>
+  </div>
+</div>

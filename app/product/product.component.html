@@ -1,0 +1,23 @@
+<div class="content">
+  <h2>
+    <input type="text" [(ngModel)]='title' placeholder='Nombre del producto'>
+  </h2>
+  <textarea [(ngModel)]='description' placeholder="Descripción"></textarea>
+  <select [(ngModel)]='sector'>
+    <option value="">Sector profesional</option>
+    <option value="">Seguros</option>
+    <option value=""></option>
+  </select>
+  <div class="forms">
+    <div class="form-wrap" *ngFor="let i of formQty | fill">
+      <div class="form-content">
+        <py-form ></py-form>
+      </div>
+    </div>
+    <div class="form-wrap">
+      <div class="add-form">
+        <button (click)='addForm()'>Añadir formulario</button>
+      </div>
+    </div>
+  </div>
+</div>
