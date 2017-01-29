@@ -38,8 +38,11 @@
           <div class="value">Valor asociado</div>
         </div>
       </div>-->
-      <div class="option-wrap" *ngFor="let i of optionQty | fill">
-        <py-option [fieldType]="type"></py-option>
+      <div class="option-wrap" *ngFor="let i of options">
+        <py-option [fieldType]="type"
+                   [localId]="i"
+                   [optionsQty]="options.length"
+                   (removeClicked)="removeOption($event)"></py-option>
       </div>
       <div class="option-wrap add-option">
         <button (click)="addOption()">Añadir opción</button>

@@ -14,6 +14,7 @@ export class FieldComponent implements OnInit {
   output: string;
   form: string;
   optionQty: number = 2;
+  options: number[] = [1, 2];
   invisible: boolean = true;
   @Input() localId: number;
   @Input() formType: string;
@@ -32,6 +33,12 @@ export class FieldComponent implements OnInit {
     }, 200);
   }
   addOption(){
-    this.optionQty++;
+    let sorted = this.options.sort(),
+        last = sorted[sorted.length - 1];
+    
+    this.options.push(last + 1)
+  }
+  removeOption(id: number): void{
+    this.options = this.options.filter(e => e != id);
   }
 }

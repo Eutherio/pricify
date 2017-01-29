@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { IForm } from './form';
 
@@ -15,11 +15,16 @@ export class FormComponent implements OnInit {
   type: string = 'contact';
   product: string;
   fields: number[] = [1];
+  @Input() localId: number;
+  @Input() formsQty: number;
+  @Output() removeClicked: EventEmitter<number> = new EventEmitter<number>();
 
   ngOnInit():void{
 
   }
-
+  removeMe(): void {
+    this.removeClicked.emit(this.localId);
+  }
   addField(): void {
     let sorted = this.fields.sort(),
         last = sorted[sorted.length - 1];

@@ -13,9 +13,16 @@ export class ProductComponent {
   title: string;
   description: string;
   sector: string;
+  forms: number[] = [1];
   formQty: number = 1;
 
   addForm(): void {
-    this.formQty++;
+    let sorted = this.forms.sort(),
+        last = sorted[sorted.length - 1];
+    
+    this.forms.push(last + 1)
+  }
+  removeForm(id: number): void {
+    this.forms = this.forms.filter(e => e != id);
   }
 }

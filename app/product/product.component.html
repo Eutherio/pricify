@@ -9,9 +9,11 @@
     <option value=""></option>
   </select>
   <div class="forms">
-    <div class="form-wrap" *ngFor="let i of formQty | fill">
+    <div class="form-wrap" *ngFor="let i of forms">
       <div class="form-content">
-        <py-form ></py-form>
+        <py-form [localId]="i"
+                 [formsQty]="forms.length"
+                 (removeClicked)="removeForm($event)"></py-form>
       </div>
     </div>
     <div class="form-wrap">
